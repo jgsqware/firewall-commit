@@ -18,6 +18,11 @@ jobs:
         uses: actions/setup-go@v2
         with:
           go-version: 1.15
+      - 
+        name: Install dependencies
+        run: |
+          go version
+          go get -u github.com/PaloAltoNetworks/pango
       -
         name: Run GoReleaser
         uses: goreleaser/goreleaser-action@v2
